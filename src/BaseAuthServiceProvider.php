@@ -4,6 +4,8 @@ namespace Christmex\BaseAuth;
 
 use Illuminate\Support\ServiceProvider;
 
+use Courier\Console\Commands\PublishCommand;
+
 class BaseAuthServiceProvider extends ServiceProvider
 {
     /**
@@ -28,6 +30,14 @@ class BaseAuthServiceProvider extends ServiceProvider
 
         //include the views
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'baseauth');
+
+        
+        // Register Command
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                PublishCommand::class,
+            ]);
+        }
         
         
     }
