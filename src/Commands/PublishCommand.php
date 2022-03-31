@@ -1,8 +1,9 @@
 <?php
 
-namespace Christmex\BaseAuth\Console\Commands;
+namespace Christmex\BaseAuth\Commands;
 
 use Illuminate\Console\Command;
+
 
 class PublishCommand extends Command
 {

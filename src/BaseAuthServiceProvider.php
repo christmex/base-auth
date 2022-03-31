@@ -4,10 +4,13 @@ namespace Christmex\BaseAuth;
 
 use Illuminate\Support\ServiceProvider;
 
-use Christmex\BaseAuth\Console\Commands;
 
 class BaseAuthServiceProvider extends ServiceProvider
 {
+    protected $commands = [
+        'Christmex\BaseAuth\Commands\PublishCommand'
+    ];
+
     /**
      * Register services.
      *
@@ -16,6 +19,7 @@ class BaseAuthServiceProvider extends ServiceProvider
     public function register()
     {
         //
+        $this->commands($this->commands);
     }
 
     /**
@@ -25,6 +29,8 @@ class BaseAuthServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+
+
         // include the routes
         $this->loadRoutesFrom(__DIR__.'/routes.php');
 
@@ -32,12 +38,6 @@ class BaseAuthServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'baseauth');
 
         
-        // Register Command
-        if ($this->app->runningInConsole()) {
-            $this->commands([
-                PublishCommand::class,
-            ]);
-        }
         
         
     }
