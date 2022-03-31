@@ -28,5 +28,7 @@ class BaseAuthServiceProvider extends ServiceProvider
 
         //include the views
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'baseauth');
+        
+        
     }
 }

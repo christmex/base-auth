@@ -1,6 +1,6 @@
 {
     "name": "christmex/base-auth",
-    "description": "BASE AUTH",
+    "description": "Provide Base Auth for your application",
     "license": "MIT",
     "authors": [
         {
@@ -8,7 +8,10 @@
             "email": "christmex@yahoo.com"
         }
     ],
-    "require": {},
+    "require": {
+        "spatie/laravel-permission": "^5.5",
+        "livewire/livewire": "^2.10"
+    },
     "autoload": {
         "psr-4": {
             "Christmex\\BaseAuth\\": "src/"
