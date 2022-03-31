@@ -4,7 +4,7 @@ namespace Christmex\BaseAuth;
 
 use Illuminate\Support\ServiceProvider;
 
-use Courier\Console\Commands\PublishCommand;
+use Christmex\BaseAuth\Console\Commands;
 
 class BaseAuthServiceProvider extends ServiceProvider
 {
