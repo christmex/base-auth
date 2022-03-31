@@ -1,0 +1,10 @@
+{
+    "name": "asus/base-auth",
+    "authors": [
+        {
+            "name": "christmex",
+            "email": "christmex@yahoo.com"
+        }
+    ],
+    "require": {}
+}
